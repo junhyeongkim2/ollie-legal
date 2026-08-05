@@ -39,7 +39,7 @@
 <body>
 
 <h1>올리(Ollie) 개인정보 처리방침</h1>
-<p class="effective">시행일: 2026년 7월 26일</p>
+<p class="effective">시행일: 2026년 8월 5일 (개정)</p>
 
 <p class="intro">김준형(이하 "개발자")은 모바일 애플리케이션 <strong>올리 - AI Voice Diary (Android 패키지명: com.richjun.ollie, 이하 "올리" 또는 "본 앱")</strong>를 제공함에 있어, 이용자의 개인정보를 보호하기 위해 「개인정보 보호법」 등 관계 법령을 준수하며 다음과 같이 개인정보를 처리합니다.</p>
 
@@ -84,15 +84,18 @@
   <li>위 정보는 이용자 기기에만 저장되며 서버로 전송되지 않습니다. 앱 삭제 시 함께 삭제됩니다.</li>
 </ul>
 
-<h3>1-5. 음성 녹음 파일에 대한 안내 (중요)</h3>
+<h3>1-5. 음성 녹음의 처리와 AI 전송에 대한 안내 (중요)</h3>
 <div class="note">
-<p>올리는 <strong>이용자의 음성 녹음 파일을 서버에 저장하거나 전송한 뒤 보관하지 않습니다.</strong></p>
-<ul>
-  <li>녹음 파일은 일기 작성 목적의 텍스트 변환을 위해 <strong>기기 내부 임시 저장 공간에만</strong> 일시적으로 생성됩니다.</li>
-  <li>텍스트 변환이 완료되면 해당 임시 파일은 <strong>즉시 자동 삭제</strong>됩니다.</li>
-  <li>변환 실패·작성 취소 시에도 임시 파일은 동일하게 삭제됩니다.</li>
-  <li>마이크 권한(RECORD_AUDIO)은 오직 이 목적으로만 사용되며, 이용자가 녹음 버튼을 누른 시점에만 동작합니다. 백그라운드에서 상시 녹음하지 않습니다.</li>
-</ul>
+<p>일기를 만들기 위해 <strong>이용자의 음성 녹음은 인공지능(AI) 서비스로 전송되어 처리됩니다.</strong> 처리 과정은 다음과 같습니다.</p>
+<ol>
+  <li>이용자가 녹음 버튼을 누르면 음성이 <strong>기기 내부 임시 파일</strong>로 저장됩니다.</li>
+  <li>이 <strong>음성 녹음 파일이 올리 서버(api.heartblending.com)를 거쳐 Google LLC가 운영하는 Gemini API로 전송</strong>되어, 음성을 텍스트로 변환하고 감정을 분석하는 데 사용됩니다.</li>
+  <li>변환된 텍스트로 일기가 생성되면 기기의 임시 녹음 파일은 <strong>즉시 자동 삭제</strong>됩니다. 변환 실패·작성 취소 시에도 동일하게 삭제됩니다.</li>
+</ol>
+<p><strong>음성 녹음 파일 자체는 올리 서버나 데이터베이스에 저장·보관되지 않으며</strong>, 처리에 필요한 순간에만 메모리에서 다루어집니다. 서버에 저장되는 것은 변환된 텍스트와 감정 분석 결과뿐입니다.</p>
+<p><strong>이용자의 사전 동의 없이는 음성이 AI로 전송되지 않습니다.</strong> 앱에서 처음 녹음을 시작할 때 어떤 정보가 누구에게 어떤 목적으로 전송되는지 안내하고 동의를 받으며, 동의하지 않으면 녹음·일기 생성 기능을 이용할 수 없습니다. 동의는 앱 내 설정에서 언제든지 철회할 수 있습니다.</p>
+<p>Google LLC는 Gemini API로 전송된 데이터를 해당 요청을 처리하는 목적으로만 사용하며, 별도로 보관하거나 모델 학습에 이용하지 않습니다. 자세한 내용은 <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 약관</a>과 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하시기 바랍니다.</p>
+<p>마이크 권한(RECORD_AUDIO)은 오직 이 목적으로만 사용되며, 이용자가 녹음 버튼을 누른 시점에만 동작합니다. 백그라운드에서 상시 녹음하지 않습니다.</p>
 </div>
 
 <h3>1-6. 수집하지 않는 정보</h3>
@@ -111,6 +114,7 @@
   </thead>
   <tbody>
     <tr><td>계정 정보</td><td>회원 식별, 로그인 및 계정 관리, 본인의 일기 데이터 접근 권한 확인</td></tr>
+    <tr><td>음성 녹음</td><td>AI(Google Gemini API)를 통한 텍스트 변환 및 감정 분석 — 이용자의 사전 동의를 받은 경우에만 전송하며, 변환 후 즉시 삭제하고 보관하지 않음</td></tr>
     <tr><td>일기 데이터</td><td>AI 기반 일기 작성·감정 분석 기능 제공, 감정 달력 및 지난 일기 조회 기능 제공, 연속 작성 일수 표시</td></tr>
     <tr><td>푸시 토큰·알림 이력</td><td>일기 작성 리마인더 등 이용자가 동의한 알림 발송</td></tr>
   </tbody>
@@ -144,7 +148,7 @@
   </thead>
   <tbody>
     <tr><td>Supabase Inc.</td><td>회원 인증, 데이터베이스 저장·운영</td><td>계정 정보, 일기 데이터, 푸시 토큰</td><td>미국 등 Supabase 운영 리전</td><td>회원 탈퇴 시까지</td></tr>
-    <tr><td>Google LLC (Gemini API)</td><td>음성 변환 텍스트의 일기 정리 및 감정 분석</td><td>일기 원문 텍스트</td><td>미국</td><td>처리 즉시 폐기(별도 저장 없음)</td></tr>
+    <tr><td>Google LLC (Gemini API)</td><td>음성의 텍스트 변환, 감정 분석, 일기 문장 생성</td><td><strong>음성 녹음 파일</strong>, 변환된 일기 원문 텍스트</td><td>미국</td><td>요청 처리 즉시 폐기(별도 저장·학습 이용 없음)</td></tr>
     <tr><td>Google LLC (Firebase Cloud Messaging)</td><td>푸시 알림 발송</td><td>기기 푸시 토큰, 알림 제목·내용</td><td>미국</td><td>회원 탈퇴 시까지</td></tr>
     <tr><td>Google LLC / Apple Inc. / 주식회사 카카오</td><td>소셜 로그인 인증</td><td>로그인 요청에 필요한 인증 정보</td><td>미국(Google·Apple), 대한민국(카카오)</td><td>인증 처리 시점에 한함</td></tr>
   </tbody>
@@ -203,8 +207,10 @@
 <h2>10. 개인정보 처리방침의 변경</h2>
 <p>본 개인정보 처리방침의 내용이 추가·삭제·수정되는 경우, 변경 사항의 시행 최소 7일 전에 본 페이지를 통해 공지합니다. 이용자의 권리에 중대한 영향을 미치는 변경의 경우에는 최소 30일 전에 공지하고, 필요한 경우 별도의 동의를 받습니다.</p>
 <ul>
-  <li><strong>공고일자</strong>: 2026년 7월 26일</li>
-  <li><strong>시행일자</strong>: 2026년 7월 26일</li>
+  <li><strong>공고일자</strong>: 2026년 8월 5일</li>
+  <li><strong>시행일자</strong>: 2026년 8월 5일</li>
+  <li><strong>이전 버전</strong>: 2026년 7월 26일 시행</li>
+  <li><strong>주요 개정 내용</strong>: 음성 녹음이 AI(Google Gemini API)로 전송되어 처리된다는 사실과 사전 동의 절차를 명확히 기재</li>
 </ul>
 
 <footer>
