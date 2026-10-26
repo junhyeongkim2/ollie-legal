@@ -93,6 +93,7 @@
 <ul>
 <li><strong>푸시</strong>: 기기 푸시 토큰, 앱 버전, 운영체제 — 알림을 허용한 경우에만</li>
 <li><strong>결제(올리 플러스)</strong>: 구독 상품, 만료일, 갱신 여부, 결제 플랫폼이 발급한 거래 식별자 — <strong>카드번호 등 결제수단 정보는 Apple·Google이 처리하며 올리는 받지 않습니다.</strong></li>
+<li><strong>앱 오류 정보</strong>: 앱이 비정상 종료되거나 통화 연결이 실패했을 때의 오류 내용, 기기 모델, 운영체제·앱 버전, 앱 언어, 앱 설치마다 만들어지는 무작위 식별자 — <strong>계정과 연결하지 않으며 대화 내용은 담지 않습니다.</strong></li>
 <li><strong>기기에만 저장</strong>: 효과음·글꼴·테마·언어 설정, 로그인 토큰(기기 보안 저장소)</li>
 </ul>
 
@@ -114,6 +115,7 @@
 <tr><td>기기 지역</td><td>이용자가 있는 나라의 상담전화·긴급 번호 안내</td></tr>
 <tr><td>이용량·결제 정보</td><td>무료 한도 적용, 올리 플러스 권한 확인</td></tr>
 <tr><td>푸시 토큰</td><td>올리의 메시지·전화 알림 발송</td></tr>
+<tr><td>앱 오류 정보</td><td>앱 비정상 종료·통화 연결 실패의 원인 분석과 안정성 개선</td></tr>
 </tbody></table></div>
 <p><strong>올리는 이용자의 대화·기억·일기를 AI 모델 학습에 쓰지 않고, 판매하거나 광고에 이용하지 않습니다.</strong></p>
 
@@ -123,6 +125,7 @@
 <tbody>
 <tr><td>계정·설정·대화·기억·일기·체크인</td><td>이용자가 개별 삭제하거나 회원 탈퇴할 때까지 (탈퇴 즉시 영구 삭제)</td></tr>
 <tr><td>통화·일기 음성</td><td>저장하지 않음 (처리 즉시 폐기)</td></tr>
+<tr><td>앱 오류 정보</td><td>수집 후 90일 (자동 삭제)</td></tr>
 <tr><td>암호화된 데이터베이스 백업</td><td>장애 복구 목적으로 최대 14일 보관 후 자동 삭제</td></tr>
 <tr><td>탈퇴 기록(감사 로그)</td><td>개인을 식별할 수 없는 형태로 1년 (분쟁 대응)</td></tr>
 </tbody></table></div>
@@ -135,6 +138,7 @@
 <tr><td>Amazon Web Services, Inc.</td><td>서버·데이터베이스 운영, 암호화 백업 보관</td><td>1항의 모든 저장 정보(암호화 상태)</td><td>대한민국(서울 리전)</td><td>3항과 같음</td></tr>
 <tr><td>Google LLC (Gemini API)</td><td>답장·음성 대화·음성 인식·기억 정리·위기 신호 판단</td><td>대화 내용, 관련 기억, 통화·일기 음성</td><td>미국</td><td>요청 처리 후 폐기(학습 이용 없음)</td></tr>
 <tr><td>Google LLC (Firebase Cloud Messaging)</td><td>푸시 알림 발송</td><td>푸시 토큰, 알림 문구</td><td>미국</td><td>탈퇴 시까지</td></tr>
+<tr><td>Google LLC (Firebase Crashlytics)</td><td>앱 오류 분석</td><td>앱 오류 정보(오류 내용, 기기 모델, 운영체제·앱 버전, 앱 언어, 설치별 무작위 식별자)</td><td>미국</td><td>90일</td></tr>
 <tr><td>RevenueCat, Inc.</td><td>구독 결제 상태 관리</td><td>앱 사용자 식별값, 구독·거래 정보</td><td>미국</td><td>탈퇴 시까지</td></tr>
 <tr><td>Apple Inc. / Google LLC / 주식회사 카카오</td><td>소셜 로그인 인증</td><td>로그인 인증 정보</td><td>미국 / 대한민국</td><td>인증 시점에 한함</td></tr>
 </tbody></table></div>
@@ -185,6 +189,7 @@
 <li><strong>시행일자</strong>: 2026년 10월 28일</li>
 <li><strong>이전 버전</strong>: 2026년 8월 5일 시행</li>
 <li><strong>주요 개정 내용</strong>: 서비스가 음성 일기에서 "기억하는 AI 대화 친구"로 바뀜에 따라 대화·통화 자막·기억·마음 날씨 수집, 민감정보 별도 동의, 위기 신호 감지, 올리가 먼저 연락하는 기능, 구독 결제(RevenueCat), 서버 이전(Supabase → AWS 서울 리전), 본문 암호화·백업 보관 기간을 반영</li>
+<li><strong>보완(2026년 10월 26일)</strong>: 앱 안정성 개선을 위한 앱 오류 정보 수집(Google Firebase Crashlytics, 계정과 연결하지 않음, 90일 보관)을 1-6·2·3·4항에 추가</li>
 </ul>
 
 <footer>

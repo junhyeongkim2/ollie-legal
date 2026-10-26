@@ -93,6 +93,7 @@
 <h3>1-6. Push notifications, payments and device information</h3>
 <ul>
 <li><strong>Push</strong>: device push token, app version, operating system — only if you allow notifications</li>
+<li><strong>App error information</strong>: when the app crashes or a call fails to connect — the error details, device model, operating system and app version, app language, and a random identifier created for each app installation — <strong>not linked to your account and never containing your conversations.</strong></li>
 <li><strong>Payment (Ollie Plus)</strong>: subscription product, expiration date, renewal status, and the transaction identifier issued by the payment platform — <strong>payment method information such as card numbers is processed by Apple and Google, and Ollie does not receive it.</strong></li>
 <li><strong>Stored only on the device</strong>: sound effects, font, theme and language settings, and login tokens (in the device's secure storage)</li>
 </ul>
@@ -115,6 +116,7 @@
 <tr><td>Device region</td><td>Showing hotline and emergency numbers for the country where the user is located</td></tr>
 <tr><td>Usage and payment information</td><td>Applying the free usage limit, verifying Ollie Plus entitlement</td></tr>
 <tr><td>Push token</td><td>Sending Ollie's message and call notifications</td></tr>
+<tr><td>App error information</td><td>Finding the causes of crashes and failed call connections, and improving stability</td></tr>
 </tbody></table></div>
 <p><strong>Ollie does not use users' conversations, memories or diary entries to train AI models, and does not sell them or use them for advertising.</strong></p>
 
@@ -124,6 +126,7 @@
 <tbody>
 <tr><td>Account, settings, conversations, memories, diary, check-ins</td><td>Until the user deletes them individually or withdraws from membership (permanently deleted immediately upon withdrawal)</td></tr>
 <tr><td>Call and diary audio</td><td>Not stored (discarded immediately after processing)</td></tr>
+<tr><td>App error information</td><td>90 days after collection (automatically deleted)</td></tr>
 <tr><td>Encrypted database backups</td><td>Kept for up to 14 days for disaster recovery, then automatically deleted</td></tr>
 <tr><td>Withdrawal records (audit log)</td><td>1 year, in a form that cannot identify an individual (for dispute response)</td></tr>
 </tbody></table></div>
@@ -136,6 +139,7 @@
 <tr><td>Amazon Web Services, Inc.</td><td>Operating servers and the database, storing encrypted backups</td><td>All stored information described in Section 1 (in encrypted form)</td><td>Republic of Korea (Seoul region)</td><td>Same as Section 3</td></tr>
 <tr><td>Google LLC (Gemini API)</td><td>Replies, voice conversations, speech recognition, organizing memories, determining crisis signals</td><td>Conversation content, related memories, call and diary audio</td><td>United States</td><td>Discarded after the request is processed (not used for training)</td></tr>
 <tr><td>Google LLC (Firebase Cloud Messaging)</td><td>Sending push notifications</td><td>Push token, notification text</td><td>United States</td><td>Until withdrawal</td></tr>
+<tr><td>Google LLC (Firebase Crashlytics)</td><td>Analyzing app errors</td><td>App error information (error details, device model, OS and app version, app language, random per-installation identifier)</td><td>United States</td><td>90 days</td></tr>
 <tr><td>RevenueCat, Inc.</td><td>Managing subscription payment status</td><td>App user identifier, subscription and transaction information</td><td>United States</td><td>Until withdrawal</td></tr>
 <tr><td>Apple Inc. / Google LLC / Kakao Corp.</td><td>Social login authentication</td><td>Login authentication information</td><td>United States / Republic of Korea</td><td>Only at the time of authentication</td></tr>
 </tbody></table></div>
@@ -186,6 +190,7 @@
 <li><strong>Effective date</strong>: October 28, 2026</li>
 <li><strong>Previous version</strong>: in effect from August 5, 2026</li>
 <li><strong>Summary of major changes</strong>: As the service changed from a voice diary to a "remembering AI conversation friend," this version reflects the collection of conversations, call transcripts, memories and inner weather; separate consent for sensitive information; crisis signal detection; the feature in which Ollie reaches out first; subscription payments (RevenueCat); the server migration (Supabase → AWS Seoul region); content encryption; and the backup retention period.</li>
+<li><strong>Supplement (October 26, 2026)</strong>: added the collection of app error information for stability (Google Firebase Crashlytics, not linked to your account, kept for 90 days) to Sections 1-6, 2, 3 and 4.</li>
 </ul>
 
 <footer>
